@@ -3,6 +3,9 @@ import pandas as pd
 from pathlib import Path
 from .schema import DepressionRequest, DepressionResponse
 from loguru import logger
+import os
+
+os.environ["CUDA_VISIBLE_DEVICES"] = "-1"
 
 MODEL_PATH = (
     Path(__file__).parent.parent.parent.parent / "models" / "depression_model.joblib"
