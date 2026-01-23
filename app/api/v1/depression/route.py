@@ -5,13 +5,13 @@ from .service import predict_depression
 router = APIRouter()
 
 
-@router.post("/predict", response_model=DepressionResponse, tags=["Depression"])
+@router.post("/predict", response_model=DepressionResponse, tags=["Depression Classification"])
 async def predict(request: DepressionRequest):
     """
     Predict depression from student data.
 
     This endpoint evaluates depression risk based on various factors including:
-    - Gender and Age
+    - Gender and Age    
     - Academic pressure and study satisfaction
     - Sleep duration and dietary habits
     - Suicidal thoughts history
